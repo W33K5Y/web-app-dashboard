@@ -1,0 +1,40 @@
+/* ! New Members section */
+
+.new-members > div {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: lightgreen 1px solid;
+    width: 80%;
+    margin: 20px auto;
+  }
+  .new-members > div > img {
+    border-radius: 50%;   
+  }
+  
+  /* ! user new  message form  */
+  
+  #userForm {
+    width: 80%;
+    height: 100%;
+  
+  }
+  #userForm input,
+  #userForm textarea,
+  #userForm button{
+    width: 60%;
+    padding: 7.5px;
+    margin: 2px;
+    border-radius: 5px;
+  }
+  #userForm textarea {
+    height: 100%;
+  }
+  
+  .form-input-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  }
+  

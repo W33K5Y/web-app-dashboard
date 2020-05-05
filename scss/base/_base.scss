@@ -1,0 +1,53 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+.main-wrap {
+  display: grid;
+  grid-template-columns: 8vh 1fr 1fr;
+  grid-template-rows: 8vh repeat(3, 1fr);
+  grid-template-areas: 
+  'header header header'
+  'nav main main'
+  'nav main main'
+  'nav main main'
+  ;
+  height: auto-fit;
+  background-color: initial;
+  font-family: 'Poppins', sans-serif;
+}
+main {
+  grid-area: main;
+}
+
+.chart {
+margin-top: 20px;    
+}
+
+/* ! Search Input and heading */
+.main-container > h1:nth-child(1) {
+  display: inline-block;
+  float: left;
+  padding: 5px;
+  margin: 8px;
+  font-size: .7em;
+ }
+ 
+.search-input {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #e7e6e6c2;
+}
+.search-input > input {
+  width: initial;
+  padding: 5px;
+  margin: 10px;
+  height: 25px;
+  background-image: url('../icons/search-icon.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  border-radius: 5px;
+}
+

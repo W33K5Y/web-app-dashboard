@@ -1,0 +1,30 @@
+/* ! svg's here for nav */
+
+.icon-dash,
+.icon-visits,
+.icon-settings,
+.icon-members,
+.icon-bell {
+  width: 25px;
+  height:25px;
+  transition: stroke 5s ease-out;
+  margin: 20px 0;
+}
+
+.icon-bell-path{
+stroke: white;
+fill: white;
+}
+.icon-bell:hover .icon-bell-path {
+  stroke: rgba(250, 234, 9, 0.87);
+  fill: rgba(250, 234, 9, 0.87);
+}
+  
+nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(77,76,114);
+}

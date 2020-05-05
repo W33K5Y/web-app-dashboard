@@ -1,0 +1,40 @@
+/* ! Header and Nav */
+header {
+    grid-area: header;
+    background-color: rgb(116,119,191);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    }
+    .header-seperator {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 33vw;
+      margin-right: 20px;
+      align-items: center;
+    }
+    .header-seperator > div {
+      display: flex;
+      justify-content: space-between;
+      width: 12vh;
+      align-items: center;
+    }
+    .main-wrap > header:nth-child(1) > h1:nth-child(1) {
+      font-size: 0.9em;
+     }
+     .main-title {
+      font-size: 0.65em;
+     }
+     
+     
+    .header-seperator > div > img {
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    }
+  
+    
+    
