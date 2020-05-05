@@ -3,15 +3,16 @@
    padding: 0;
    box-sizing: border-box;
 }
+// ! in media queries replace below to 3 columns
 .main-wrap {
   display: grid;
-  grid-template-columns: 8vh 1fr 1fr;
+  grid-template-columns: 8vh 1fr ;
   grid-template-rows: 8vh repeat(3, 1fr);
   grid-template-areas: 
-  'header header header'
-  'nav main main'
-  'nav main main'
-  'nav main main'
+  'header header'
+  'nav main'
+  'nav main'
+  'nav main'
   ;
   height: auto-fit;
   background-color: initial;
@@ -35,6 +36,7 @@ margin-top: 20px;
  }
  
 .search-input {
+  @include flex(flex-end,null);
   display: flex;
   justify-content: flex-end;
   background-color: #e7e6e6c2;

@@ -1,7 +1,7 @@
 /* ! Header and Nav */
 header {
     grid-area: header;
-    background-color: rgb(116,119,191);
+    background-color: $secondaryColor;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

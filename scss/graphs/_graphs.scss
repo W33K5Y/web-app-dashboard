@@ -53,7 +53,7 @@
       fill: white;
     }
     .social-br {
-      background-color: rgb(77,76,114);
+      background-color: $primaryColor;
       border-radius: 50%;
       height: 60px;
       width: 60px;
@@ -65,20 +65,15 @@
       background: #efefef;
       border: 1px solid black;
       border-radius: 5px;
-      display: flex;
+     @include flex( space-around, center);
       width: 55%;
       margin: 20px auto;
-      justify-content: space-evenly;
-      align-items: center;
     }
     #twitter h3,
     #facebook h3,
     #google  h3{
-      color:  rgb(77,76,114);
+      color:  $primaryColor;
       font-weight: 300;
       letter-spacing: .01em;
     }
     
-    .social-br {
-    
-    }
