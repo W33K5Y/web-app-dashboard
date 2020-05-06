@@ -6,7 +6,7 @@
 // ! in media queries replace below to 3 columns
 .main-wrap {
   display: grid;
-  grid-template-columns: 8vh 1fr ;
+  grid-template-columns: 10vw 90vw ;
   grid-template-rows: 8vh repeat(3, 1fr);
   grid-template-areas: 
   'header header'
@@ -22,9 +22,8 @@ main {
   grid-area: main;
 }
 
-.chart {
-margin-top: 20px;    
-}
+
+
 
 /* ! Search Input and heading */
 .main-container > h1:nth-child(1) {
@@ -53,3 +52,17 @@ margin-top: 20px;
   border-radius: 5px;
 }
 
+// .chart {
+  
+//   height: 40vh;
+//   width: 40vh;
+// }
+
+#lineChart,
+#barChart,
+#doughnutChart{
+margin: 10px auto;
+width:200px;
+}
+
+ 

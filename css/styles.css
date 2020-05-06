@@ -6,7 +6,7 @@
 
 .main-wrap {
   display: grid;
-  grid-template-columns: 8vh 1fr;
+  grid-template-columns: 10vw 90vw;
   grid-template-rows: 8vh repeat(3, 1fr);
   grid-template-areas: "header header" "nav main" "nav main" "nav main";
   height: auto-fit;
@@ -16,10 +16,6 @@
 
 main {
   grid-area: main;
-}
-
-.chart {
-  margin-top: 20px;
 }
 
 /* ! Search Input and heading */
@@ -49,6 +45,13 @@ main {
   background-position: right;
   background-size: contain;
   border-radius: 5px;
+}
+
+#lineChart,
+#barChart,
+#doughnutChart {
+  margin: 10px auto;
+  width: 200px;
 }
 
 /* ! Header and Nav */
@@ -215,10 +218,16 @@ nav {
   width: 80%;
   margin: 20px auto;
   padding: 10px;
+  font-size: 0.6em;
 }
 
-.new-members > div > img {
+.new-members > div > img:not(:last-child) {
   border-radius: 50%;
+  height: 50px;
+}
+
+section.new-members:nth-child(8) > h2 {
+  margin-left: 30px;
 }
 
 #userForm {
@@ -275,6 +284,11 @@ nav {
   margin: 10px 0;
 }
 
+.arrowClick {
+  height: 20px;
+  width: 20px;
+}
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -285,14 +299,16 @@ nav {
   background-color: #ccc;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  height: 20px;
+  width: 40px;
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
+  height: 10px;
+  width: 10px;
+  left: 3px;
   bottom: 4px;
   background-color: white;
   -webkit-transition: 0.4s;
@@ -319,6 +335,28 @@ input:checked + .slider:before {
 
 .round:before {
   border-radius: 50%;
+}
+
+.form-button > button,
+.form-input-wrap > button {
+  border-radius: 5px;
+  margin: 2px;
+  color: whitesmoke;
+  background-color: #4d4c72;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  padding: 1px 3px;
+  border: #7477bf;
+}
+
+.form-button > button:hover,
+.form-input-wrap > button:hover {
+  background-color: #626091;
+}
+
+#timeZone {
+  margin: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */
