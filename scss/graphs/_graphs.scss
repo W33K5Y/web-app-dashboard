@@ -2,7 +2,7 @@
 
 .dash-line-btns > li > a{
     text-decoration: none;
-    background-color: lightgreen;
+    background-color: $links;
     color: white;
     border-radius: 5px;
     text-shadow: 1px 1px 1px rgba(0, 36, 0, 0.787);
@@ -12,6 +12,13 @@
     .dash-line-btns > li{
       list-style: none;
       }
+      .dash-line-btns > li > a:hover{
+        background-color: darken($links,10%)
+        }
+        .dash-line-btns > li > a:active{
+          background-color: darken($links,40%)
+          }
+
       .dash-line-btns {
           display: flex;
           justify-content: flex-end;

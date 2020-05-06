@@ -1,11 +1,8 @@
-.alert {
-  display: none;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 .main-wrap {
@@ -99,6 +96,10 @@ header {
   width: 36px;
 }
 
+.alert {
+  display: none;
+}
+
 /* ! svg's here for nav */
 .icon-dash,
 .icon-visits,
@@ -143,6 +144,14 @@ nav {
 
 .dash-line-btns > li {
   list-style: none;
+}
+
+.dash-line-btns > li > a:hover {
+  background-color: #64e764;
+}
+
+.dash-line-btns > li > a:active {
+  background-color: #189a18;
 }
 
 .dash-line-btns {

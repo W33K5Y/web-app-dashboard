@@ -205,13 +205,7 @@ const bChart = new Chart(barChart, {
     // Configuration options go here
     options: {
         legend: {
-            position: 'top',
-            align: 'start',
-            labels: {
-                boxWidth: 15,
-                padding: 20
-                
-            }
+           display:false
         },
         scales: {
             yAxes: [{

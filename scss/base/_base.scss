@@ -2,6 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
 }
 // ! in media queries replace below to 3 columns
 .main-wrap {
@@ -52,11 +53,6 @@ main {
   border-radius: 5px;
 }
 
-// .chart {
-  
-//   height: 40vh;
-//   width: 40vh;
-// }
 
 #lineChart,
 #barChart,
