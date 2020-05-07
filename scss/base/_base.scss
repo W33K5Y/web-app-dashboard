@@ -28,7 +28,6 @@ main {
 
 /* ! Search Input and heading */
 .main-container > h1:nth-child(1) {
-  display: inline-block;
   float: left;
   padding: 5px;
   margin: 8px;
@@ -61,4 +60,6 @@ margin: 50px auto;
 width:200px;
 }
 
- 
+.alert {
+  display: none;
+}

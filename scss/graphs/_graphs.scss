@@ -13,7 +13,8 @@
       list-style: none;
       }
       .dash-line-btns > li > a:hover{
-        background-color: darken($links,10%)
+        background-color: darken($links,10%);
+        cursor: pointer;
         }
         .dash-line-btns > li > a:active{
           background-color: darken($links,40%)
@@ -26,7 +27,12 @@
           margin-top:10px ;
          }
          
-    
+    // ! headings 
+    .graph-title {
+      font-weight: 100;
+      font-size: .7em;
+      margin-left: 2px;
+    }
     /* ! Social- media svg and Divs */
     
     .twitter-svg,

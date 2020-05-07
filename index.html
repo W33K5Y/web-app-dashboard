@@ -13,7 +13,7 @@
 				<div class="main-wrap">
 					<header>
 						<h1>Your App™</h1>
-						<div class="header-seperator">
+						<div class="header-seperator head-wrap">
 							<!-- ! icon-bell -->
 							<?xml version="1.0" encoding="utf-8"?>
 							<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -126,22 +126,40 @@
 		<input type='text' placeholder='Search...' id='search-text-input' />
 	</div>
 	<div class="alert-message">
+
+		<?xml version="1.0" encoding="utf-8"?>
+
+<svg class="cross" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<g>
+	<circle class="cross-circle" cx="51" cy="47" r="24"/>
+	<path d="M51,24c12.68,0,23,10.32,23,23S63.68,70,51,70S28,59.68,28,47S38.32,24,51,24 M51,22c-13.81,0-25,11.19-25,25
+		s11.19,25,25,25s25-11.19,25-25S64.81,22,51,22L51,22z"/>
+</g>
+<g>
+	<line class="cross-path" x1="39.5" y1="35.5" x2="62.5" y2="58.5"/>
+</g>
+<line class="cross-path" x1="39.5" y1="58.5" x2="62.5" y2="35.5"/>
+</svg>
 		<!-- ! JS Goes here -->
 	</div>
 	<ul class="dash-line-btns">
-		<li><a id="hourly" href="#hourly">Hourly</a></li>
-		<li><a id="daily" href="#daily">Daily</a></li>
-		<li><a id="weekly" href="#weekly">Weekly</a></li>
-		<li><a id="monthly" href="#monthly">Monthly</a></li>
+		<li><a id="hourly" >Hourly</a></li>
+		<li><a id="daily" >Daily</a></li>
+		<li><a id="weekly" >Weekly</a></li>
+		<li><a id="monthly" >Monthly</a></li>
 	</ul>
 	<div class="line-chart-wrap chart">
+		<h2 class="graph-title">Traffic</h2>
 		<canvas id="lineChart" > </canvas>
 	</div>
 	<div class="dailyTraffic ">
 		<div class="chart">
+			<h2 class="graph-title">Daily Traffic</h2>
 			<canvas id="barChart"></canvas>
 		</div>
 		<div class="chart">
+			<h2 class="graph-title">Mobile Users</h2>
 			<canvas id="doughnutChart"></canvas>
 		</div>
 	</div>
@@ -256,8 +274,8 @@
 			
 			<h4>MESSAGE USER</h4>
 			<div class="form-input-wrap">
-				<input type="search" placeholder="Search for user">
-				<textarea name="messageUser" id="messageUser" placeholder="Message for user"></textarea>
+				<input type="search" placeholder="search users">
+				<textarea name="messageUser" id="messageUser" placeholder="message user"></textarea>
 				<button type="submit">send</button>
 				
 			</form>
@@ -414,6 +432,7 @@
 			</div>
 		</div>
 	</section>
+	
 </main>
 </div>
 <script src="js/app.js"></script> 

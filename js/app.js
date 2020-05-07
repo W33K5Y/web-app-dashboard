@@ -57,7 +57,7 @@ dashLineBtns.addEventListener('click', (e) => {
                 label: 'Traffic',
                 backgroundColor: 'rgb(77,76,114,.8)',
                 borderColor: 'rgb(116,119,191)',
-                data: test1,
+                data: hourArr,
                 borderWidth: 1,
             }]
         },
@@ -271,9 +271,23 @@ const alertDiv = document.querySelector('.alert-message');
 const alertMessage = () => {
     const alertDiv = document.querySelector('.alert-message');
     const alert = document.createElement('p');
-    alert.innerHTML = `this is a test informing myself about the test and its testiness`
+    alert.innerHTML = `<span class="make-bold">Alert</span> this is an alert, alerting you about its alertiness`;
     alertDiv.appendChild(alert);
 }
 alertMessage();
+
+// ! code for toggling alert behaviors 
+
 const bell = document.querySelector('.icon-bell');
-bell.addEventListener('click', () =>  alertDiv.classList.toggle('alert'));
+const cross = document.querySelector('.cross');
+bell.addEventListener('click', () => alertDiv.classList.toggle('alert'));
+// cross.addEventListener('click', () => alertDiv.classList = "alert");
+
+// const messageUser = document.getElementById('messageUser');
+// messageUser.addEventListener('click',() => messageUser.placeholder = ' ');
+// window.addEventListener('click', e => e.target !== messageUser ? messageUser.placeholder = "message user" : null);
+const ul = document.querySelector('.alert-notifications');
+ul.getElementsByClassName.display = "initial";
+bell.addEventListener('mouseover', () => {
+ul.getElementsByClassName.display = "initial"
+});

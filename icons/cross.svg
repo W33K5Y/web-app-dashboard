@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.cross-path{fill:#FFFFFF;}
+	.cross-path{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<g>
+	<circle class="st0" cx="51" cy="47" r="24"/>
+	<path d="M51,24c12.68,0,23,10.32,23,23S63.68,70,51,70S28,59.68,28,47S38.32,24,51,24 M51,22c-13.81,0-25,11.19-25,25
+		s11.19,25,25,25s25-11.19,25-25S64.81,22,51,22L51,22z"/>
+</g>
+<g>
+	<line class="cross-path" x1="39.5" y1="35.5" x2="62.5" y2="58.5"/>
+</g>
+<line class="cross-path" x1="39.5" y1="58.5" x2="62.5" y2="35.5"/>
+</svg>

@@ -1,43 +1,74 @@
 /* ! Header and Nav */
 header {
-    grid-area: header;
-    background-color: $secondaryColor;
+  grid-area: header;
+  background-color: $secondaryColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+  }
+  .header-seperator {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 33vw;
+    margin-right: 20px;
     align-items: center;
-    color: whitesmoke;
-    }
-    .header-seperator {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 33vw;
-      margin-right: 20px;
-      align-items: center;
-    }
-    .header-seperator > div {
-      display: flex;
-      justify-content: space-between;
-      width: 12vh;
-      align-items: center;
-    }
-    .main-wrap > header:nth-child(1) > h1:nth-child(1) {
-      font-size: 0.9em;
-     }
-     .main-title {
-      font-size: 0.65em;
-     }
-     
-     
-    .header-seperator > div > img {
-    border-radius: 50%;
-    height: 36px;
-    width: 36px;
-    }
-    // ! toggle class for the alert icon
-    .alert{
-      display: none;
   }
-    
-    
+  .header-seperator > div {
+    display: flex;
+    justify-content: space-between;
+    width: 12vh;
+    align-items: center;
+  }
+  .main-wrap > header:nth-child(1) > h1:nth-child(1) {
+    font-size: 0.9em;
+   }
+   .main-title {
+    font-size: 0.65em;
+   }
+   
+   
+  .header-seperator > div > img {
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  }
+  // ! toggle class for the alert icon plus alert settings 
+
+.make-bold {
+  color: white;
+  margin-right: 10px;
+}
+.alert-message {
+  background-color: blueviolet;
+  width: 80%;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: .7em;
+  @include flex(space-between, center);
+  flex-direction: row-reverse;
+  
+}
+
+.alert-message > svg{
+  height: 50px;
+  width: 50px;
+ }
+ 
+ 
+.cross-circle {
+  fill:  blueviolet;
+}
+
+.cross-path {
+  fill:#FFFFFF;
+  fill:none;
+  stroke:#000000;
+  stroke-width:2;
+  stroke-miterlimit:10;
+}
+
+  
