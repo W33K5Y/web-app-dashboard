@@ -19,6 +19,10 @@ fill: white;
   stroke: rgba(250, 234, 9, 0.87);
   fill: rgba(250, 234, 9, 0.87);
 }
+
+.icon-bell:hover {
+  cursor: pointer;
+}
   
 nav {
   grid-area: nav;

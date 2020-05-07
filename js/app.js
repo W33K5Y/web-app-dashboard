@@ -280,14 +280,16 @@ alertMessage();
 
 const bell = document.querySelector('.icon-bell');
 const cross = document.querySelector('.cross');
-bell.addEventListener('click', () => alertDiv.classList.toggle('alert'));
-// cross.addEventListener('click', () => alertDiv.classList = "alert");
-
-// const messageUser = document.getElementById('messageUser');
-// messageUser.addEventListener('click',() => messageUser.placeholder = ' ');
-// window.addEventListener('click', e => e.target !== messageUser ? messageUser.placeholder = "message user" : null);
-const ul = document.querySelector('.alert-notifications');
-ul.getElementsByClassName.display = "initial";
-bell.addEventListener('mouseover', () => {
-ul.getElementsByClassName.display = "initial"
+bell.addEventListener('click', () => {
+    alertDiv.classList.toggle('alert-message');
+    alertDiv.classList.toggle('alert');
+    cross.classList.toggle('alert');
 });
+
+// ! to click off via cross reverse the above 
+cross.addEventListener('click', () => {
+    alertDiv.classList.toggle('alert-message');
+    alertDiv.classList.toggle('alert');
+    cross.classList.toggle('alert');
+});
+
