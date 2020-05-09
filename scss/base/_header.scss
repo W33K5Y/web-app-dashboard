@@ -112,7 +112,7 @@ opacity: .8;
   color: white;
   margin-right: 10px;
 }
-.alert-message, .alert-message2{
+.alert-message, .alert-message2,.alert-message3{
   background-color: blueviolet;
   width: 80%;
   margin: 20px;
@@ -130,7 +130,9 @@ opacity: .8;
   display: none;
   
 }
-.alert-message > svg, .alert-message2 > svg {
+.alert-message > svg,
+.alert-message2 > svg,
+.alert-message3 > svg  {
   max-height: 50px;
   max-width: 20px;
 }
@@ -148,7 +150,7 @@ opacity: .8;
   stroke-miterlimit:10;
 }
 
-.cross, .cross2 {
+.cross, .cross2,.cross3 {
   cursor: pointer;
 }
 

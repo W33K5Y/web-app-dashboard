@@ -3,6 +3,8 @@
 			<head>
 				<meta charset="UTF-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+				<meta content="utf-8" http-equiv="encoding"> -->
 				<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
 				<link rel="stylesheet" href="css/styles.css">
 				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -138,7 +140,14 @@
 <main class="main-container">
 	<h1>Dashboard</h1>
 	<div class="search-input">
-		<input type='text' placeholder='Search...' id='search-text-input' />
+		<input list="search-text-input" type='text' placeholder='Search...' id='search-text-choice' name="search-text-choice" />
+		<datalist id="search-text-input">
+			<option value="Member One">
+			<option value="Member two">
+			<option value="Member Three">
+			<option value="Member Four">
+			<option value="Member Five">
+		</datalist>
 	</div>
 	<!-- ! Alert message1  -->
 	<div class="alert-message" >
@@ -320,11 +329,42 @@
 			
 			<h4>MESSAGE USER</h4>
 			<div class="form-input-wrap">
-				<input type="search" placeholder="search users">
+				<input list="search-text-user" type='text' placeholder='search users' id='search-text-choices' name="search-text-choices" />
+				<datalist id="search-text-user">
+					<option value="Member One">
+					<option value="Member two">
+					<option value="Member Three">
+					<option value="Member Four">
+					<option value="Member Five">
+				</datalist>
 				<textarea name="messageUser" id="messageUser" placeholder="message user"></textarea>
-				<button type="submit">send</button>
+				<button class="send-message" type="submit">send</button>
 				
 			</form>
+			<div class="alert-message3-js alert" >
+<!--  -->
+				<?xml version="1.0" encoding="utf-8"?>
+		
+		<svg class="cross3 alert" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+		<g>
+			<circle class="cross-circle" cx="51" cy="47" r="24"/>
+			<path d="M51,24c12.68,0,23,10.32,23,23S63.68,70,51,70S28,59.68,28,47S38.32,24,51,24 M51,22c-13.81,0-25,11.19-25,25
+				s11.19,25,25,25s25-11.19,25-25S64.81,22,51,22L51,22z"/>
+		</g>
+		<g>
+			<line class="cross-path" x1="39.5" y1="35.5" x2="62.5" y2="58.5"/>
+		</g>
+		<line class="cross-path" x1="39.5" y1="58.5" x2="62.5" y2="35.5"/>
+		</svg>
+				<!-- ! JS Goes here -->
+				<div class="alert-3 ">
+					<p>
+						<span class="make-bold">Alert</span> 
+						Your message was sent. 
+					</p>
+				</div>
+			</div>
 		</div>
 	</section>
 	<!-- ! Recent Activity Section -->
@@ -477,8 +517,8 @@
 				<option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</option>
 			</select>	
 			<div class="form-button">
-				<button type="Submit">save</button>
-				<button type="Submit">cancel</button>
+				<button type="submit">save</button>
+				<button type="submit">cancel</button>
 			</div>
 		</div>
 	</section>

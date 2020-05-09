@@ -159,7 +159,7 @@ header {
   margin-right: 10px;
 }
 
-.alert-message, .alert-message2 {
+.alert-message, .alert-message2, .alert-message3 {
   background-color: blueviolet;
   width: 80%;
   margin: 20px;
@@ -178,7 +178,9 @@ header {
   display: none;
 }
 
-.alert-message > svg, .alert-message2 > svg {
+.alert-message > svg,
+.alert-message2 > svg,
+.alert-message3 > svg {
   max-height: 50px;
   max-width: 20px;
 }
@@ -195,7 +197,7 @@ header {
   stroke-miterlimit: 10;
 }
 
-.cross, .cross2 {
+.cross, .cross2, .cross3 {
   cursor: pointer;
 }
 
@@ -354,14 +356,16 @@ section.new-members:nth-child(8) > h2 {
   margin-left: 30px;
 }
 
-#userForm > h4:nth-child(1) {
+/* Element | http://127.0.0.1:5500/# */
+.form-wrap {
+  top: 30px;
   position: relative;
-  top: -20px;
 }
 
-#userForm {
-  width: 80%;
-  height: 100%;
+/* styles.css | http://127.0.0.1:5500/css/styles.css */
+#userForm > h4:nth-child(1) {
+  position: relative;
+  top: -52px;
 }
 
 #userForm input,
@@ -371,10 +375,8 @@ section.new-members:nth-child(8) > h2 {
   padding: 7.5px;
   margin: 2px;
   border-radius: 5px;
-}
-
-#userForm textarea {
-  height: 100%;
+  position: relative;
+  top: 3px;
 }
 
 .form-input-wrap {
@@ -383,6 +385,10 @@ section.new-members:nth-child(8) > h2 {
   justify-content: center;
   align-items: center;
   height: 20vh;
+}
+
+button[type=submit] {
+  cursor: pointer;
 }
 
 .switch {
