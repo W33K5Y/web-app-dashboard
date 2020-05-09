@@ -266,30 +266,107 @@ const dChart = new Chart(doughnutChart, {
 });
 
 // ! the code for the alert to go here
+
+
+// const alertMessage = () => {
+//     const alertDiv = document.querySelector('.alert-message');
+//     const alert = document.createElement('p');
+//     alert.innerHTML = `<span class="make-bold">Alert</span> this is an alert, alerting you about its alertiness`;
+//     alertDiv.appendChild(alert);
+// }
+// alertMessage();
+
+// ! Selectors for alerts 
 const alertDiv = document.querySelector('.alert-message');
-
-const alertMessage = () => {
-    const alertDiv = document.querySelector('.alert-message');
-    const alert = document.createElement('p');
-    alert.innerHTML = `<span class="make-bold">Alert</span> this is an alert, alerting you about its alertiness`;
-    alertDiv.appendChild(alert);
-}
-alertMessage();
-
-// ! code for toggling alert behaviors 
-
+const alertDiv2 = document.querySelector('.alert-message2');
 const bell = document.querySelector('.icon-bell');
 const cross = document.querySelector('.cross');
-bell.addEventListener('click', () => {
+const cross2 = document.querySelector('.cross2');
+const link1 = document.querySelector('.link1');
+const link2 = document.querySelector('.link2');
+const alert1 = document.querySelector('.alert-1');
+const alert2 = document.querySelector('.alert-2');
+const dropdownWrap = document.querySelector('.dropdown-wrap');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+// ! object created to clean up messy code 
+
+ const toggle = {
+   alertMessage1: function () { 
     alertDiv.classList.toggle('alert-message');
     alertDiv.classList.toggle('alert');
     cross.classList.toggle('alert');
+ },
+ alertMessage2: function () { 
+ alertDiv2.classList.toggle('alert-message2');
+ alertDiv2.classList.toggle('alert');
+ cross2.classList.toggle('alert');
+},
+dropDownMenu: function () {
+    dropdownContent.classList.toggle('.dropdown-content');
+    dropdownWrap.classList.toggle('dropdown-wrap-js');
+    dropdownContent.classList.toggle('dropdown-content-js');
+    dropdownContent.classList.toggle('dropdown-content');
+}
+ }
+
+// ! may not be used as its causing issues 
+// bell.addEventListener('click', () => {
+// toggle.alertMessage1();
+// toggle.alertMessage2();
+// });
+
+// ! both croses for alerts 
+cross.addEventListener('click', () => toggle.alertMessage1());
+cross2.addEventListener('click', () => toggle.alertMessage2());
+
+// ! dropDownMenu 
+bell.addEventListener('click', (e) => toggle.dropDownMenu());
+
+dropdownContent.addEventListener('click', e => {
+    if(e.target === link1) {
+ toggle.alertMessage1();
+    }
+   else if (e.target === link2) {
+toggle.alertMessage2();
+   }
 });
 
-// ! to click off via cross reverse the above 
-cross.addEventListener('click', () => {
-    alertDiv.classList.toggle('alert-message');
-    alertDiv.classList.toggle('alert');
-    cross.classList.toggle('alert');
+
+
+// ! slider 
+
+// const onBtn = document.querySelector('.on');
+const sliderEl = document.querySelectorAll('.slider');
+
+function onAlert(el) {
+el.innerHTML = `<p class="on-js">ON</p>`
+}
+function offAlert(el) {
+    el.innerHTML = ``;
+    }
+    const emailNoti   =   document.getElementById('email-noti').checked;
+    const profileNoti = document.getElementById('profile-noti').checked;
+    const toggleWrap = document.querySelector('.t-wrap1');
+    const toggleWrap2 = document.querySelector('.t-wrap2');
+    const sliderJs1 = document.querySelector('.slider-js-1');
+    const sliderJs2 = document.querySelector('.slider-js-2');
+   
+    toggleWrap.addEventListener('click', () => {
+ if (document.getElementById('email-noti').checked) {
+    onAlert(sliderJs1);
+ } else {
+     offAlert(sliderJs1);
+ }
 });
+
+toggleWrap2.addEventListener('click', () => {
+    if (document.getElementById('profile-noti').checked) {
+       console.log('this is checked ');
+       onAlert(sliderJs2);
+    } else { 
+        offAlert(sliderJs2);
+    }
+   });
+
 

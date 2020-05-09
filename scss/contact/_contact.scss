@@ -4,11 +4,13 @@
     display: flex;
     justify-content: space-around;
     border-bottom: $border 1px solid;
-    width: 80%;
+    width: auto;
     margin: 20px auto;
-    padding: 10px;
     font-size: .6em;
+    padding: 10px 10px 50px 10px;
+   height: 100%;
   }
+  
   .new-members > div > img:not(:last-child) {
     border-radius: 50%;
     height: 50px;
@@ -19,7 +21,11 @@
    
 
   //! user new  message form  */
-  
+  #userForm > h4:nth-child(1) {
+    position: relative;
+    top: -20px;
+   }
+   
   #userForm {
     width: 80%;
     height: 100%;
@@ -89,6 +95,7 @@
   transition: .4s;
   height: 20px;
   width: 40px;
+  transition: display .1s ease-in .2s;
 }
 
 .slider:before {
@@ -128,6 +135,13 @@ input:checked + .slider:before {
 .round:before {
   border-radius: 50%;
 } 
+
+.on-js {
+  padding: 2px 5px 2px 5px;
+  color: whitesmoke
+  
+}
+
   // ! select group styles
   .form-button > button,
   .form-input-wrap > button {

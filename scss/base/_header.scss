@@ -34,17 +34,28 @@ header {
   border-radius: 50%;
   height: 36px;
   width: 36px;
+  margin-right: 5px;
   }
 
   // ! styles for dropdown menu 
-.dropdown-wrap {
+  // .arrow-down {
+  //   float: right;
+  //   font-size: .7em;
+  //   position: relative;
+  //   // right: 12.5px;
+  //   color: whitesmoke;
+  // }
+  .dropdown-content {
+    display: none;
+  }
+.dropdown-wrap-js {
   position: relative;
   display: inline-block;
 }
-.dropdown-content {
- display: none;
+.dropdown-content-js {
+//  display: none;
 position: absolute;
-top: 10vh;
+top: 87.5%;
 min-width: 100px;
 background-color: $linksNav;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -52,24 +63,27 @@ padding: 5px 6px;
 z-index: 1;
 border-radius: 0 0 5px 5px;
 }
-.dropdown-content > ul li {
+.dropdown-content-js > ul li {
   list-style-type:none ;
   padding: 2px;
   background-color: darken($linksNav,5%);
   border-radius: 3px;
   border-bottom: 1px solid black;
 }
-.dropdown-content > ul li a {
+.dropdown-content-js > ul li a {
   text-decoration: none;
-  color: rgba(0,0,0,0.8);
+  color:whitesmoke;
+  text-shadow: 1px 1px 2px #000;
+  letter-spacing: .05em;
   padding-right:50px ;
+  cursor: pointer;
 }
-.dropdown-wrap:hover .dropdown-content {
-  display: block;
-}
-.dropdown-content > ul li:hover {
-  background-color: darken($linksNav, 40%);
-}
+// .dropdown-wrap-js:hover .dropdown-content-js {
+//   display: block;
+// }
+// .dropdown-content-js > ul li:hover {
+//   background-color: darken($linksNav, 40%);
+// }
 //  !keyframes for alert box
 
   @keyframes slideIn {
@@ -98,12 +112,12 @@ opacity: .8;
   color: white;
   margin-right: 10px;
 }
-.alert-message {
+.alert-message, .alert-message2{
   background-color: blueviolet;
   width: 80%;
   margin: 20px;
   border-radius: 5px;
-  padding: 0 10px;
+  padding: 5px 10px;
   font-size: .7em;
   @include flex(space-between, center);
   flex-direction: row-reverse;
@@ -116,10 +130,10 @@ opacity: .8;
   display: none;
   
 }
-.alert-message > svg{
-  height: 50px;
-  width: 50px;
- }
+.alert-message > svg, .alert-message2 > svg {
+  max-height: 50px;
+  max-width: 20px;
+}
  
  
 .cross-circle {
@@ -130,10 +144,14 @@ opacity: .8;
   fill:#FFFFFF;
   fill:none;
   stroke:#000000;
-  stroke-width:2;
+  stroke-width:6;
   stroke-miterlimit:10;
 }
 
-.cross {
+.cross, .cross2 {
   cursor: pointer;
 }
+
+// .cross-circle + path {
+// stroke-width: 8;
+// }

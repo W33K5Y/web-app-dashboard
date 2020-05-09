@@ -31,11 +31,11 @@
 								</g>
 							</g>
 						</svg>
-
+						
 						<div class="dropdown-content">
 							<ul>
-								<li><a href="#">alert1</a></li>
-								<li><a href="#">alert2</a></li>
+								<li><a class="link1" href="#">Alert:1</a></li>
+								<li><a class="link2" href="#">Alert:2</a></li>
 							</ul>
 						</div>
 
@@ -140,11 +140,36 @@
 	<div class="search-input">
 		<input type='text' placeholder='Search...' id='search-text-input' />
 	</div>
+	<!-- ! Alert message1  -->
 	<div class="alert-message" >
 
 		<?xml version="1.0" encoding="utf-8"?>
 
 <svg class="cross" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<g>
+	<circle  class="cross-circle" cx="51" cy="47" r="24"/>
+	<path d="M51,24c12.68,0,23,10.32,23,23S63.68,70,51,70S28,59.68,28,47S38.32,24,51,24 M51,22c-13.81,0-25,11.19-25,25
+		s11.19,25,25,25s25-11.19,25-25S64.81,22,51,22L51,22z"/>
+</g>
+<g>
+	<line class="cross-path" x1="39.5" y1="35.5" x2="62.5" y2="58.5"/>
+</g>
+<line class="cross-path" x1="39.5" y1="58.5" x2="62.5" y2="35.5"/>
+</svg>
+		<!-- ! JS Goes here -->
+		<div class="alert-1">
+			<p>
+			<span class="make-bold">Alert</span> this is an alert, alerting you about its alertiness
+		</p>
+		</div>	
+	</div>
+	<!-- ! Alert message2 -->
+	<div class="alert-message2 " >
+
+		<?xml version="1.0" encoding="utf-8"?>
+
+<svg class="cross2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
 <g>
 	<circle class="cross-circle" cx="51" cy="47" r="24"/>
@@ -157,7 +182,13 @@
 <line class="cross-path" x1="39.5" y1="58.5" x2="62.5" y2="35.5"/>
 </svg>
 		<!-- ! JS Goes here -->
+		<div class="alert-2 ">
+			<p>
+				<span class="make-bold">Alert</span> this is the 2nd alert, alerting you about its alertiness with equal importance
+			</p>
+		</div>
 	</div>
+
 	<ul class="dash-line-btns">
 		<li><a id="hourly" >Hourly</a></li>
 		<li><a id="daily" >Daily</a></li>
@@ -341,18 +372,22 @@
 			
 			<!--! Rounded switch -->
 			<h4>SETTINGS</h4>
-			<div class="toggle-wrap">
+			<div class="toggle-wrap t-wrap1">
 				<p>Send Email Notifications</p>
 				<label class="switch">
-					<input type="checkbox">
-					<span class="slider round"></span>
+					<input type="checkbox" id="email-noti">
+					<span class="slider slider-js-1 round">
+						<!-- <p class="on on-js">ON</p> -->
+					</span>
 				</label>
 			</div>
-			<div class="toggle-wrap">
+			<div class="toggle-wrap t-wrap2">
 				<p>Set profile to public</p>
 				<label class="switch">
-					<input type="checkbox">
-					<span class="slider round"></span>
+					<input type="checkbox" id="profile-noti">
+					<span class="slider slider-js-2 round">
+						<!-- <p class="on on-js">ON</p> -->
+					</span>
 				</label>
 			</div>
 			<label for="timeZone">State:</label>	
@@ -450,6 +485,7 @@
 	
 </main>
 </div>
+
 <script src="js/app.js"></script> 
 </body>
 </html>

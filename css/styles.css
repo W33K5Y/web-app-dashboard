@@ -36,7 +36,7 @@ main {
 }
 
 .search-input > input {
-  width: initial;
+  width: 80%;
   padding: 5px;
   margin: 10px;
   height: 25px;
@@ -93,17 +93,21 @@ header {
   border-radius: 50%;
   height: 36px;
   width: 36px;
-}
-
-.dropdown-wrap {
-  position: relative;
-  display: inline-block;
+  margin-right: 5px;
 }
 
 .dropdown-content {
   display: none;
+}
+
+.dropdown-wrap-js {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content-js {
   position: absolute;
-  top: 10vh;
+  top: 87.5%;
   min-width: 100px;
   background-color: rgba(144, 238, 144, 0.712);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -112,7 +116,7 @@ header {
   border-radius: 0 0 5px 5px;
 }
 
-.dropdown-content > ul li {
+.dropdown-content-js > ul li {
   list-style-type: none;
   padding: 2px;
   background-color: rgba(122, 235, 122, 0.712);
@@ -120,18 +124,13 @@ header {
   border-bottom: 1px solid black;
 }
 
-.dropdown-content > ul li a {
+.dropdown-content-js > ul li a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.8);
+  color: whitesmoke;
+  text-shadow: 1px 1px 2px #000;
+  letter-spacing: 0.05em;
   padding-right: 50px;
-}
-
-.dropdown-wrap:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content > ul li:hover {
-  background-color: rgba(24, 154, 24, 0.712);
+  cursor: pointer;
 }
 
 @keyframes slideIn {
@@ -160,12 +159,12 @@ header {
   margin-right: 10px;
 }
 
-.alert-message {
+.alert-message, .alert-message2 {
   background-color: blueviolet;
   width: 80%;
   margin: 20px;
   border-radius: 5px;
-  padding: 0 10px;
+  padding: 5px 10px;
   font-size: 0.7em;
   display: flex;
   justify-content: space-between;
@@ -179,9 +178,9 @@ header {
   display: none;
 }
 
-.alert-message > svg {
-  height: 50px;
-  width: 50px;
+.alert-message > svg, .alert-message2 > svg {
+  max-height: 50px;
+  max-width: 20px;
 }
 
 .cross-circle {
@@ -192,11 +191,11 @@ header {
   fill: #FFFFFF;
   fill: none;
   stroke: #000000;
-  stroke-width: 2;
+  stroke-width: 6;
   stroke-miterlimit: 10;
 }
 
-.cross {
+.cross, .cross2 {
   cursor: pointer;
 }
 
@@ -339,10 +338,11 @@ nav {
   display: flex;
   justify-content: space-around;
   border-bottom: lightgreen 1px solid;
-  width: 80%;
+  width: auto;
   margin: 20px auto;
-  padding: 10px;
   font-size: 0.6em;
+  padding: 10px 10px 50px 10px;
+  height: 100%;
 }
 
 .new-members > div > img:not(:last-child) {
@@ -352,6 +352,11 @@ nav {
 
 section.new-members:nth-child(8) > h2 {
   margin-left: 30px;
+}
+
+#userForm > h4:nth-child(1) {
+  position: relative;
+  top: -20px;
 }
 
 #userForm {
@@ -425,6 +430,7 @@ section.new-members:nth-child(8) > h2 {
   transition: 0.4s;
   height: 20px;
   width: 40px;
+  transition: display 0.1s ease-in 0.2s;
 }
 
 .slider:before {
@@ -465,6 +471,11 @@ input:checked + .slider:before {
 
 .round:before {
   border-radius: 50%;
+}
+
+.on-js {
+  padding: 2px 5px 2px 5px;
+  color: whitesmoke;
 }
 
 .form-button > button,
