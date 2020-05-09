@@ -19,17 +19,20 @@ section.new-members:nth-child(8) > h2 {
   margin-left: 30px;
  }
  
+ section.new-members > h2 {
+  margin-top: 19px;
+  padding-top: 10px;
+ }
+ 
 
 //! Message user form  */
 
-/* Element | http://127.0.0.1:5500/# */
 
 .form-wrap {
 top: 30px;
 position: relative;
 }
 
-/* styles.css | http://127.0.0.1:5500/css/styles.css */
 
 #userForm > h4:nth-child(1) {
 position: relative;

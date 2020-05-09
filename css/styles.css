@@ -7,8 +7,8 @@
 
 .main-wrap {
   display: grid;
-  grid-template-columns: 10vw 90vw;
-  grid-template-rows: 8vh repeat(3, 1fr);
+  grid-template-columns: 10% 90%;
+  grid-template-rows: 10% repeat(3, 1fr);
   grid-template-areas: "header header" "nav main" "nav main" "nav main";
   height: auto-fit;
   background-color: initial;
@@ -107,7 +107,7 @@ header {
 
 .dropdown-content-js {
   position: absolute;
-  top: 87.5%;
+  top: 100%;
   min-width: 100px;
   background-color: rgba(144, 238, 144, 0.712);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -356,13 +356,16 @@ section.new-members:nth-child(8) > h2 {
   margin-left: 30px;
 }
 
-/* Element | http://127.0.0.1:5500/# */
+section.new-members > h2 {
+  margin-top: 19px;
+  padding-top: 10px;
+}
+
 .form-wrap {
   top: 30px;
   position: relative;
 }
 
-/* styles.css | http://127.0.0.1:5500/css/styles.css */
 #userForm > h4:nth-child(1) {
   position: relative;
   top: -52px;

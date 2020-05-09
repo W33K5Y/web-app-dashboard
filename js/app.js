@@ -340,12 +340,18 @@ toggle.alertMessage2();
 });
 // ! ======== sent alert for MESSAGE USER ========== 
 const sendBtn = document.querySelector('.send-message');
+const searchArea = document.getElementById('search-text-choices');
+const textArea = document.getElementById('messageUser');
 // ! prevent the default action to prevent the button trying to submit to a server 
 sendBtn.addEventListener('click', (e) => {
 e.preventDefault()
 toggle.messageSent();
+searchArea.value = "";
+textArea.value = "";
 });
-cross3.addEventListener('click', () => toggle.messageSent());
+cross3.addEventListener('click', () => {
+    toggle.messageSent();
+});
 
 
 // ! ======== Radio slider ==========
@@ -361,15 +367,45 @@ el.innerHTML = `<p class="on-js">ON</p>`
 function offAlert(el) {
     el.innerHTML = ``;
     }
-//   ! Attach the listener to toggle  
+//   ! Attach the listener to both settings to toggle  
 toggleWrap.addEventListener('click', () => {
- document.getElementById('email-noti').checked ?
-  onAlert(sliderJs1)   :  offAlert(sliderJs1);
+ if (document.getElementById('email-noti').checked ) {
+  onAlert(sliderJs1)
+  }
+  else{
+ offAlert(sliderJs1);
+  }
 });
 
 toggleWrap2.addEventListener('click', () => {
- document.getElementById('profile-noti').checked ?
-onAlert(sliderJs2) : offAlert(sliderJs2);
+ if (document.getElementById('profile-noti').checked){
+    onAlert(sliderJs2) 
+ }
+else {
+offAlert(sliderJs2);
+}
 });
 
+// ! local storage & saving settings 
+const saveBtn = document.querySelector('.save');
+const cancelBtn = document.querySelector('.cancel');
+const emailNoti = document.getElementById('email-noti');
+const profileNoti = document.getElementById('profile-noti');
+const timeZone = document.getElementById('timeZone');
+saveBtn.addEventListener('click', () => {
+    localStorage.setItem('email', emailNoti.checked);
+    localStorage.setItem('profileToPublic', profileNoti.checked);
+    localStorage.setItem('timeZone', timeZone.value);
+});
+cancelBtn.addEventListener('click', () => {
+    localStorage.removeItem('email');
+    localStorage.removeItem('profileToPublic');
+    localStorage.removeItem('timeZone');
+});
 
+window.onload = function () {
+    emailNoti.checked = JSON.parse(localStorage.getItem('email'));
+    profileNoti.checked = JSON.parse(localStorage.getItem('email'));
+    timeZone.checked = JSON.parse(localStorage.getItem('timeZone'));
+    console.log('test');
+};

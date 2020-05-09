@@ -7,8 +7,8 @@
 // ! in media queries replace below to 3 columns
 .main-wrap {
   display: grid;
-  grid-template-columns: 10vw 90vw ;
-  grid-template-rows: 8vh repeat(3, 1fr);
+  grid-template-columns: 10% 90% ;
+  grid-template-rows: 10% repeat(3, 1fr);
   grid-template-areas: 
   'header header'
   'nav main'
