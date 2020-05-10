@@ -420,7 +420,7 @@ cancelBtn.addEventListener('click', () => {
 
 window.onload = function () {
     emailNoti.checked = JSON.parse(localStorage.getItem('email'));
-    profileNoti.checked = JSON.parse(localStorage.getItem('email'));
+    profileNoti.checked = JSON.parse(localStorage.getItem('profileToPublic'));
     timeZone.checked = JSON.parse(localStorage.getItem('timeZone'));
-    console.log('test');
+
 };
