@@ -1,5 +1,8 @@
 //! New Members section */
-
+section.new-members > h2 {
+  margin-left: 10px;
+ }
+ 
 .new-members > div {
   display: flex;
   justify-content: space-around;
@@ -19,12 +22,14 @@ section.new-members:nth-child(8) > h2 {
   margin-left: 30px;
  }
  
- section.new-members > h2 {
+ section.new-members > h4 {
   margin-top: 19px;
   padding-top: 10px;
  }
  
-
+h4 {
+  margin-left: 10px;
+}
 //! Message user form  */
 
 
@@ -51,22 +56,25 @@ top: -52px;
   position: relative;
   top: 3px;
 }
-// #userForm textarea {
-//   height: 100%;
-// }
 
 .form-input-wrap {
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-height: 20vh;
+height: 100%;
+min-width: 380px;
 }
 button[type="submit"] {
   cursor: pointer;
  }
  
-
+ #message-sent {
+  max-height: 32px;
+  font-size: 1.2em;
+  max-width: 260px;
+ }
+ 
 //!  /* The switch - the box around the slider */
 .switch {
 position: relative;
@@ -94,8 +102,8 @@ margin: 10px 0;
 
 // ! arrow 
 .arrowClick {
-height: 20px;
-width: 20px;
+  height: 40px;
+  width: 40px;
 }
 
 // ! The slider 

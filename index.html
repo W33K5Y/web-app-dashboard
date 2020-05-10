@@ -284,13 +284,15 @@
 </div>	
 </section>
 
+<!-- ! wrapping the two contact sections together  -->
+<div class="contact-wrap">
 <!-- ! new members section -->
-<section class="new-members">
-	<h2>New Members</h2>
+<section class="new-members" id="new-members-wrap">
+	<h4>NEW MEMBERS</h4>
 	<!-- ! member-1 -->
 	<div>
 		<img src="images/member-1.jpg" alt="member1">
-		<div>
+		<div class='member-email-wrap'>
 			<h4>Member1</h4>
 			<a href="example1@gmail.co.uk">member1@gmail.co.uk</a>
 		</div>
@@ -299,7 +301,7 @@
 	<!-- ! member-2 -->
 	<div>
 		<img src="images/member-2.jpg" alt="member1">
-		<div>
+		<div class='member-email-wrap'>
 			<h4>Member2</h4>
 			<a href="example2@gmail.co.uk">member2@gmail.co.uk</a>
 		</div>
@@ -308,7 +310,7 @@
 	<!-- ! member-3 -->
 	<div>
 		<img src="images/member-3.jpg" alt="member1">
-		<div>
+		<div class='member-email-wrap'>
 			<h4>Member3</h4>
 			<a href="example3@gmail.co.uk">member3@gmail.co.uk</a>
 		</div>
@@ -317,7 +319,7 @@
 	<!-- ! member-4 -->
 	<div>
 		<img src="images/member-4.jpg" alt="member1">
-		<div>
+		<div class='member-email-wrap'>
 			<h4>Member4</h4>
 			<a href="example4@gmail.co.uk">member4@gmail.co.uk</a>
 		</div>
@@ -325,7 +327,7 @@
 	</div>
 	
 	<h4>MESSAGE USER</h4>
-	<div class="form-wrap">
+	<div class="form-wrap" id="formWrap">
 		<form id="userForm" action="index.html" method="post">
 			<div class="form-input-wrap">
 				<input list="search-text-user" type='text' placeholder='search users' id='search-text-choices' name="search-text-choices" />
@@ -340,7 +342,7 @@
 				<button class="send-message" type="submit">send</button>
 				
 			</form>
-			<div class="alert-message3-js alert" >
+			<div class="alert-message3-js alert" id="message-sent" >
 <!--  -->
 				<?xml version="1.0" encoding="utf-8"?>
 		
@@ -367,16 +369,16 @@
 		</div>
 	</section>
 	<!-- ! Recent Activity Section -->
-	<section class="new-members">
-		<h2>New Members</h2>
+	<section class="new-members" id="recent-activity-wrap">
+		<h4>RECENT ACTIVITY</h4>
 		<!-- ! member-1 -->
 		<div>
 			<img src="images/member-1.jpg" alt="member1">
-			<div>
+			<div >
 				<p>Member one done a thing</p>
 				<p> Some time limit</p>
 			</div>
-			<img class="arrowClick"  src="icons/arrow.svg" alt="see notification">
+			<img class="arrowClick"  src="icons/arrow-icon.svg" alt="see notification">
 		</div>
 		<!-- ! member-2 -->
 		<div>
@@ -385,7 +387,7 @@
 				<p>Member two done a thing</p>
 				<p> Some time limit</p>
 			</div>
-			<img  class="arrowClick" src="icons/arrow.svg" alt="see notification">
+			<img  class="arrowClick" src="icons/arrow-icon.svg" alt="see notification">
 		</div>
 		<!-- ! member-3 -->
 		<div>
@@ -394,7 +396,7 @@
 				<p>Member three done a thing </p>
 				<p> Some time limit</p>
 			</div>
-			<img  class="arrowClick" src="icons/arrow.svg" alt="see notification">
+			<img  class="arrowClick" src="icons/arrow-icon.svg" alt="see notification">
 		</div>
 		<!-- ! member-4 -->
 		<div>
@@ -404,13 +406,13 @@
 				<p>Member three done a thing</p>
 				<p> Some time limit</p>
 			</div>
-			<img class="arrowClick"  src="icons/arrow.svg" alt="see notification">
+			<img class="arrowClick"  src="icons/arrow-icon.svg" alt="see notification">
 		</div>
 		
-		<div class="news-wrap">
+		<h4>SETTINGS</h4>
+		<div class="news-wrap" id="settings">
 			
 			<!--! Rounded switch -->
-			<h4>SETTINGS</h4>
 			<div class="toggle-wrap t-wrap1">
 				<p>Send Email Notifications</p>
 				<label class="switch">
@@ -521,7 +523,7 @@
 			</div>
 		</div>
 	</section>
-	
+</div>
 </main>
 </div>
 

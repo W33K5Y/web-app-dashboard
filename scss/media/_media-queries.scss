@@ -1,51 +1,133 @@
-
-// @media (min-width: 768px) {
-
-//     //  ! social media into flex
-// .social-media-svg {
-//     display: flex;
-//   }
-//   #twitter,
-//   #facebook,
-//   #google {
-//     flex-basis: 28%;
-//     padding: 2px;
-//   }
+// !========= Tablet view ===========
+@media (min-width: 768px) {
+.main-wrap {
+  grid-template-rows: 80px 1fr;
+}
+.dropdown-content-js {
+  top: 73px;
+  }
+    //  ! social media into flex
+.social-media-svg {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #twitter,
+  #facebook,
+  #google {
+    flex-basis: 28%;
+    padding: 2px;
+  }
   
-//   .header-seperator > div > img {
-//     height: 48px;
-//     width: 48px;
-//     }
+  .header-seperator > div > img {
+    height: 48px;
+    width: 48px;
+    }
        
-//     //! header size increase 
+    //! header size increase 
 
-// .header-seperator > div > img {
-//     height: 48px;
-//     width: 48px;
-//   }
+.header-seperator > div > img {
+    height: 48px;
+    width: 48px;
+  }
   
-//   .header-seperator > div {
-//     width: 199px;
-//   }
+  .header-seperator > div {
+    width: 199px;
+  }
   
-//   .header-seperator {
-//     width: 40vw;
-//   }
+  .header-seperator {
+    width: 40vw;
+  }
   
-//   .main-title {
-//     font-size: 0.85em;
-//   }
-// //   .main-wrap > header:nth-child(1) > h1:nth-child(1) {
-// //     font-size: 1.2em;
-// //   }
-// }
-
-// // ! form input 
-// .form-input-wrap {
-//     min-width: 540px;
-//   }
-// @media (min-width: 1024px) {
+  .main-title {
+    font-size: 0.85em;
+  }
+// ! contact section 
+.form-input-wrap {
+    min-width: 702px;
+  }
+  #messageUser {
+    min-height: 100px;
+   }
    
-       
-       
+
+}
+
+// !========= Desktop view ===========
+
+@media (min-width: 1024px) {
+  #hourly,#daily,#weekly,#monthly {
+    min-height: 19px;
+    font-size: 1.6em;
+   }
+   
+  .dailyTraffic {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr ;
+  }
+ 
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  // background-color: lightpink;
+  gap: 2%;
+  margin: 0 10px 0 10px;
+}
+
+.new-members > div {
+  height: auto;
+}
+
+.member-email-wrap {
+  flex-grow: 2;
+  margin-left: 20px;
+}
+#new-members-wrap,
+#recent-activity-wrap
+ {
+  width: 100%;
+  
+  }
+  .form-input-wrap {
+    min-width: 400px;
+   }
+   #settings{
+    display: flex;
+    align-content: flex-end;
+    // padding-top: 65px;
+    border-bottom: none;
+    & button {
+      width: 40%;
+      height: 31.6px
+    }
+   }
+   
+   #formWrap {
+    border-bottom: none;
+    & button {
+      min-width: 90%;
+      margin-top: 3px;
+
+    }
+   }
+
+   #search-text-choices {
+    min-width: 90%;
+    margin: 0 auto;
+    }
+    #messageUser {
+    min-width: 90%;
+    }
+   
+}
+
+ 
+
+// .contact-wrap {
+//   display: flex;
+//   justify-content: space-between;
+//   align-content: center;
+//   background-color: lightgreen;
 // }

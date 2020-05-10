@@ -5,14 +5,18 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  contain: content;
+}
+
 .main-wrap {
   display: grid;
-  grid-template-columns: 10% 90%;
-  grid-template-rows: 10% repeat(3, 1fr);
-  grid-template-areas: "header header" "nav main" "nav main" "nav main";
-  height: auto-fit;
+  grid-template-columns: 10vw 90vw;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas: "header header" "nav main";
   background-color: initial;
   font-family: "Poppins", sans-serif;
+  height: 100%;
 }
 
 main {
@@ -54,6 +58,11 @@ main {
   width: 200px;
 }
 
+svg {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
 /* ! Header and Nav */
 header {
   grid-area: header;
@@ -77,7 +86,7 @@ header {
 .header-seperator > div {
   display: flex;
   justify-content: space-between;
-  width: 12vh;
+  width: 100%;
   align-items: center;
 }
 
@@ -107,7 +116,7 @@ header {
 
 .dropdown-content-js {
   position: absolute;
-  top: 100%;
+  top: 62px;
   min-width: 100px;
   background-color: rgba(144, 238, 144, 0.712);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -181,8 +190,9 @@ header {
 .alert-message > svg,
 .alert-message2 > svg,
 .alert-message3 > svg {
-  max-height: 50px;
-  max-width: 20px;
+  height: 50px;
+  min-width: 45px;
+  max-width: 45px;
 }
 
 .cross-circle {
@@ -190,8 +200,6 @@ header {
 }
 
 .cross-path {
-  fill: #FFFFFF;
-  fill: none;
   stroke: #000000;
   stroke-width: 6;
   stroke-miterlimit: 10;
@@ -240,7 +248,7 @@ nav {
 .dash-line-btns > li > a {
   text-decoration: none;
   background-color: lightgreen;
-  color: white;
+  color: whitesmoke;
   border-radius: 5px;
   text-shadow: 1px 1px 1px rgba(0, 36, 0, 0.787);
   padding: 2px 6px;
@@ -336,6 +344,10 @@ nav {
   letter-spacing: 0.01em;
 }
 
+section.new-members > h2 {
+  margin-left: 10px;
+}
+
 .new-members > div {
   display: flex;
   justify-content: space-around;
@@ -356,9 +368,13 @@ section.new-members:nth-child(8) > h2 {
   margin-left: 30px;
 }
 
-section.new-members > h2 {
+section.new-members > h4 {
   margin-top: 19px;
   padding-top: 10px;
+}
+
+h4 {
+  margin-left: 10px;
 }
 
 .form-wrap {
@@ -387,11 +403,18 @@ section.new-members > h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 20vh;
+  height: 100%;
+  min-width: 380px;
 }
 
 button[type=submit] {
   cursor: pointer;
+}
+
+#message-sent {
+  max-height: 32px;
+  font-size: 1.2em;
+  max-width: 260px;
 }
 
 .switch {
@@ -423,8 +446,8 @@ button[type=submit] {
 }
 
 .arrowClick {
-  height: 20px;
-  width: 20px;
+  height: 40px;
+  width: 40px;
 }
 
 .slider {
@@ -507,6 +530,124 @@ input:checked + .slider:before {
 
 #timeZone {
   margin: 15px;
+}
+
+@media (min-width: 768px) {
+  .main-wrap {
+    grid-template-rows: 80px 1fr;
+  }
+
+  .dropdown-content-js {
+    top: 73px;
+  }
+
+  .social-media-svg {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #twitter,
+#facebook,
+#google {
+    flex-basis: 28%;
+    padding: 2px;
+  }
+
+  .header-seperator > div > img {
+    height: 48px;
+    width: 48px;
+  }
+
+  .header-seperator > div > img {
+    height: 48px;
+    width: 48px;
+  }
+
+  .header-seperator > div {
+    width: 199px;
+  }
+
+  .header-seperator {
+    width: 40vw;
+  }
+
+  .main-title {
+    font-size: 0.85em;
+  }
+
+  .form-input-wrap {
+    min-width: 702px;
+  }
+
+  #messageUser {
+    min-height: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  #hourly, #daily, #weekly, #monthly {
+    min-height: 19px;
+    font-size: 1.6em;
+  }
+
+  .dailyTraffic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2%;
+    margin: 0 10px 0 10px;
+  }
+
+  .new-members > div {
+    height: auto;
+  }
+
+  .member-email-wrap {
+    flex-grow: 2;
+    margin-left: 20px;
+  }
+
+  #new-members-wrap,
+#recent-activity-wrap {
+    width: 100%;
+  }
+
+  .form-input-wrap {
+    min-width: 400px;
+  }
+
+  #settings {
+    display: flex;
+    align-content: flex-end;
+    border-bottom: none;
+  }
+  #settings button {
+    width: 40%;
+    height: 31.6px;
+  }
+
+  #formWrap {
+    border-bottom: none;
+  }
+  #formWrap button {
+    min-width: 90%;
+    margin-top: 3px;
+  }
+
+  #search-text-choices {
+    min-width: 90%;
+    margin: 0 auto;
+  }
+
+  #messageUser {
+    min-width: 90%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
