@@ -1,20 +1,22 @@
 
-$border: lightgreen;
+$border: #14141438;
 $font: black;
-$links: lightgreen;
-$linksNav: rgba(144, 238, 144, 0.712);
+$links: #141414;
+$linksNav: rgba(232, 255, 23, .6);
 $links-font: whitesmoke;
-$primaryColor: rgb(77, 76, 114);
-$secondaryColor: rgb(116, 119, 191);
+$primaryColor: rgb(232, 255, 23);
+$secondaryColor: #141414;
 $bell: whitesmoke ;
-$nav-svg: white;
+$nav-background: #141414;
 $header: whitesmoke;
 $social-svg: white;
 $social-svg-bkg: rgb(232, 255, 23);
 $alert: white;
-$alertBackground: blueviolet;
+$alertBackground: #141414;
+.s {
+    color: #141414ca
 
-
+}
 
 
 // $border: lightgreen;

@@ -16,10 +16,13 @@ const start = new Chart(lineChart, {
          labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3','4-10','11-17','18-24','25-31'],
     datasets: [{
         label: 'Traffic',
-        backgroundColor: 'rgb(77,76,114,.8)',
+        backgroundColor: '#141414ca',
         borderColor: 'rgb(116,119,191)',
         data: hourArr,
         borderWidth: 1,
+        pointBackgroundColor: 'rgb(250,250,250)',
+        pointBorderColor: '#141414',
+        pointBorderWidth: 2,
     }]
 },
 
@@ -55,10 +58,13 @@ dashLineBtns.addEventListener('click', (e) => {
                  labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3','4-10','11-17','18-24','25-31'],
             datasets: [{
                 label: 'Traffic',
-                backgroundColor: 'rgb(77,76,114,.8)',
+                backgroundColor: '#141414ca',
                 borderColor: 'rgb(116,119,191)',
                 data: hourArr,
                 borderWidth: 1,
+                pointBackgroundColor: 'rgb(250,250,250)',
+                pointBorderColor: '#141414',
+                pointBorderWidth: 2,
             }]
         },
         
@@ -88,10 +94,13 @@ dashLineBtns.addEventListener('click', (e) => {
                 labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3','4-10','11-17','18-24','25-31'],
            datasets: [{
                label: 'Traffic',
-               backgroundColor: 'rgb(77,76,114,.8)',
+               backgroundColor: '#141414ca',
                borderColor: 'rgb(116,119,191)',
                data: dailyArr,
                borderWidth: 1,
+               pointBackgroundColor: 'rgb(250,250,250)',
+               pointBorderColor: '#141414',
+               pointBorderWidth: 2,
            }]
         },
         
@@ -121,10 +130,13 @@ dashLineBtns.addEventListener('click', (e) => {
                 labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3','4-10','11-17','18-24','25-31'],
            datasets: [{
                label: 'Traffic',
-               backgroundColor: 'rgb(77,76,114,.8)',
+               backgroundColor: '#141414ca',
                borderColor: 'rgb(116,119,191)',
                data: weeklyArr,
                borderWidth: 1,
+               pointBackgroundColor: 'rgb(250,250,250)',
+               pointBorderColor: '#141414',
+               pointBorderWidth: 2,
            }]
         },
         
@@ -154,10 +166,13 @@ dashLineBtns.addEventListener('click', (e) => {
                 labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3','4-10','11-17','18-24','25-31'],
            datasets: [{
                label: 'Traffic',
-               backgroundColor: 'rgb(77,76,114,.8)',
+               backgroundColor: '#141414ca',
                borderColor: 'rgb(116,119,191)',
                data: monthlyArr,
                borderWidth: 1,
+               pointBackgroundColor: 'rgb(250,250,250)',
+               pointBorderColor: '#141414',
+               pointBorderWidth: 2,
            }]
         },
         
@@ -195,7 +210,7 @@ const bChart = new Chart(barChart, {
         labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
         datasets: [{
             label: 'Daily Traffic',
-            backgroundColor: 'rgba(77,76,114,.8)',
+            backgroundColor: '#141414ca',
             borderColor: 'rgb(116,119,191)',
             data: [50, 100, 150, 200, 250,200, 60],
         }]
@@ -228,7 +243,7 @@ const dChart = new Chart(doughnutChart, {
         labels: ['Phones','Tablets','Desktop'],
         datasets: [{
             label: 'Mobile Users',
-            backgroundColor:['rgb(77,76,114,.8)','lightblue','lightgreen'],
+            backgroundColor:['#611114','#0d4532','#00032c'],
             borderColor: 'rgb(116,119,191)',
             data: [2000, 550, 500],
             

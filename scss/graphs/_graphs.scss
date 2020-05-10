@@ -5,7 +5,7 @@
     background-color: $links;
     color: $links-font;
     border-radius: 5px;
-    text-shadow: 1px 1px 1px rgba(0, 36, 0, 0.787);
+    // text-shadow: 1px 1px 1px rgba(0, 36, 0, 0.787);
     padding: 2px 6px;
     margin-right: 4px;
     }
@@ -13,11 +13,11 @@
       list-style: none;
       }
       .dash-line-btns > li > a:hover{
-        background-color: darken($links,10%);
+        background-color: lighten($links,15%);
         cursor: pointer;
         }
         .dash-line-btns > li > a:active{
-          background-color: darken($links,40%)
+          background-color: lighten($links,40%)
           }
 
       .dash-line-btns {
@@ -63,10 +63,10 @@
     .twitter-svg-path,
     .facebook-svg-path,
     .google-svg-path {
-      fill: white;
+      fill: $secondaryColor;
     }
     .social-br {
-      background-color: $primaryColor;
+      background-color: whitesmoke;
       border-radius: 50%;
       height: 60px;
       width: 60px;
@@ -75,17 +75,20 @@
     #twitter,
     #facebook,
     #google {
-      background: #efefef;
-      border: 1px solid black;
-      border-radius: 5px;
+      background: $secondaryColor;
+      border: 1px solid whitesmoke;
+      border-radius: 10px;
      @include flex( space-around, center);
       width: 55%;
       margin: 20px auto;
+       & p {
+        color: whitesmoke;
+       }
     }
     #twitter h3,
     #facebook h3,
     #google  h3{
-      color:  $primaryColor;
+      color:  whitesmoke;
       font-weight: 300;
       letter-spacing: .01em;
     }

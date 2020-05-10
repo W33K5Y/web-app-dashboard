@@ -172,7 +172,7 @@ color: whitesmoke
   border-radius: 5px;
   margin: 2px;
   color:whitesmoke;
-  background-color: $primaryColor;
+  background-color: $secondaryColor;
   font-size: 1em;
   font-weight: 300;
   letter-spacing: .05em;
@@ -181,7 +181,7 @@ color: whitesmoke
  }
  .form-button > button:hover,
  .form-input-wrap > button:hover {
-   background-color: lighten($primaryColor, 10%);
+   background-color: lighten($secondaryColor, 10%);
  }
  
  #timeZone {

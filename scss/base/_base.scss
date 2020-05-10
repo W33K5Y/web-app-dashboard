@@ -41,7 +41,9 @@ main {
   @include flex(flex-end,null);
   display: flex;
   justify-content: flex-end;
-  background-color: #e7e6e6c2;
+  background-color: $secondaryColor;
+  border-top: whitesmoke 1px solid;
+  border-radius: 4px 0 0 4px;
 }
 .search-input > input {
   width: 80%;

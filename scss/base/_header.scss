@@ -49,7 +49,7 @@ header {
 position: absolute;
 top: 62px;
 min-width: 100px;
-background-color: $linksNav;
+background-color: #141414;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 padding: 5px 6px;
 z-index: 1;
@@ -58,16 +58,19 @@ border-radius: 0 0 5px 5px;
 .dropdown-content-js > ul li {
   list-style-type:none ;
   padding: 2px;
-  background-color: darken($linksNav,5%);
+  background-color: #282828;
   border-radius: 3px;
   border-bottom: 1px solid black;
 }
 .dropdown-content-js > ul li a {
   text-decoration: none;
-  color:$links-font;
-  text-shadow: 1px 1px 2px #000;
-  letter-spacing: .05em;
+  // font-family: sans-serif;
+  color:whitesmoke;
+  // text-shadow: 1px 1px 2px #000;
+  letter-spacing: .15em;
   padding-right:50px ;
+  margin-left: 1px;
+  font-weight: 400;
   cursor: pointer;
 }
 // .dropdown-wrap-js:hover .dropdown-content-js {
@@ -96,17 +99,18 @@ opacity: .8;
     to {
       transform: translateY(-10px) scale(1);
       opacity: 1;
-      background-color: lighten(blueviolet, 2%);
+      background-color: lighten($alertBackground, 2%);
     }
   }
  // ! toggle class for the alert icon plus alert settings 
 .make-bold {
-  color: white;
+  color: #e8ff17c2;
   margin-right: 10px;
 }
 .alert-message, .alert-message2,.alert-message3{
   background-color: $alertBackground;
   width: 80%;
+  color: whitesmoke;
   margin: 20px;
   border-radius: 5px;
   padding: 5px 10px;
@@ -133,10 +137,11 @@ opacity: .8;
  
 .cross-circle {
   fill:  $alertBackground;
+  stroke: #fff;
 }
 
 .cross-path {
-  stroke:#000000;
+  stroke:#fff;
   stroke-width:6;
   stroke-miterlimit:10;
 }

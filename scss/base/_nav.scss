@@ -30,5 +30,10 @@ nav {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: $primaryColor;
+  background-color: $nav-background;
+  border-top: thick double $primaryColor;
+}
+.st0 {
+  fill: whitesmoke;
+  stroke-width: 3;
 }

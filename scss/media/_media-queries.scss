@@ -4,7 +4,7 @@
   grid-template-rows: 80px 1fr;
 }
 .dropdown-content-js {
-  top: 73px;
+  top: 80px;
   }
     //  ! social media into flex
 .social-media-svg {
@@ -120,7 +120,17 @@
     #messageUser {
     min-width: 90%;
     }
-   
+  //  ! nav svg 
+  .icon-dash,
+.icon-visits,
+.icon-settings,
+.icon-members,
+.icon-bell {
+  width: 46px;
+  height: 36px;
+  transition: stroke 5s ease-out;
+  margin: 20px 0;
+}
 }
 
  
