@@ -111,7 +111,7 @@ header {
 .bell-wrap {
   display: flex;
   justify-content: space-between;
-  align-items: last baseline;
+  align-items: baseline;
 }
 
 .carrot-up, .carrot-down {
@@ -493,7 +493,7 @@ button[type=submit] {
   flex-direction: row;
   margin: 10px 0;
   height: 50px;
-  align-items: last baseline;
+  align-items: baseline;
 }
 
 .arrowClick {
