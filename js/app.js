@@ -49,6 +49,7 @@ dashLineBtns.addEventListener('click', (e) => {
     const weeklyLi= document.querySelector('#weekly');
     const monthlyLi= document.querySelector('#monthly');
     if (e.target === hourlyLi ) {
+         
         const hourly = new Chart(lineChart, {
             // The type of chart we want to create
             type: 'line',
@@ -280,17 +281,6 @@ const dChart = new Chart(doughnutChart, {
     }
 });
 
-// ! the code for the alert to go here
-
-
-// const alertMessage = () => {
-//     const alertDiv = document.querySelector('.alert-message');
-//     const alert = document.createElement('p');
-//     alert.innerHTML = `<span class="make-bold">Alert</span> this is an alert, alerting you about its alertiness`;
-//     alertDiv.appendChild(alert);
-// }
-// alertMessage();
-
 // ! Selectors for alerts 
 const alertDiv = document.querySelector('.alert-message');
 const alertDiv2 = document.querySelector('.alert-message2-js');
@@ -339,6 +329,7 @@ carrotFunc: function () {
 // ! may not be used causing issues 
 bell.addEventListener('click', () => {
 toggle.carrotFunc();
+
 });
 
 // ! both close/croses for alerts 
@@ -354,6 +345,8 @@ dropdownContent.addEventListener('click', e => {
     }
    else if (e.target === link2) {
 toggle.alertMessage2();
+document.querySelector('.noti-light').style.display = 'none';
+link2.textContent = 'Alert 2';
    }
 });
 // ! ======== sent alert for MESSAGE USER ========== 
@@ -362,11 +355,20 @@ const searchArea = document.getElementById('search-text-choices');
 const textArea = document.getElementById('messageUser');
 // ! prevent the default action to prevent the button trying to submit to a server 
 sendBtn.addEventListener('click', (e) => {
-e.preventDefault()
-toggle.messageSent();
+const search = document.getElementById('search-text-choices');
+const message = document.getElementById('messageUser');
+if(search.value === '' || message.value == '') {
+       alert('You must fill in a username and include at least one character in your message.')
+} else if (search.value !== ''){
+        console.log('whey');
+        toggle.messageSent();
 searchArea.value = "";
 textArea.value = "";
+}
+e.preventDefault()
+
 });
+
 cross3.addEventListener('click', () => {
     toggle.messageSent();
 });
@@ -404,7 +406,7 @@ offAlert(sliderJs2);
 }
 });
 
-// ! local storage & saving settings 
+// ! local storage & save settings 
 const saveBtn = document.querySelector('.save');
 const cancelBtn = document.querySelector('.cancel');
 const emailNoti = document.getElementById('email-noti');
@@ -428,3 +430,30 @@ window.onload = function () {
     profileNoti.checked = JSON.parse(localStorage.getItem('profileToPublic'));
     timeZone.value = JSON.parse(localStorage.getItem('timeZone'));
 };
+
+// ! object for color change in the dahline graph ul links
+const colorChange = {
+    change: function (target) {
+        target.style.backgroundColor = "rgb(232, 255, 23)";
+        target.style.color = "#141414";
+    },
+    revert: function (target) {
+        target.style.backgroundColor = "#141414";
+        target.style.color = "#f5f5f5";
+    }
+}
+// ! toggle for active dashlie li 
+dashLineBtns.addEventListener('click', e => {
+    const hourlyLi = document.querySelector('#hourly');
+    const dailyLi = document.querySelector('#daily');
+    const weeklyLi= document.querySelector('#weekly');
+    const monthlyLi= document.querySelector('#monthly');
+e.target === hourlyLi ? colorChange.change(hourlyLi)  : colorChange.revert(hourlyLi);
+e.target === dailyLi ? colorChange.change(dailyLi)  : colorChange.revert(dailyLi);
+e.target === weeklyLi ? colorChange.change(weeklyLi)  : colorChange.revert(weeklyLi);
+e.target === monthlyLi ? colorChange.change(monthlyLi)  : colorChange.revert(monthlyLi);
+ 
+});
+
+// ! send button and make sure both fields are filled
+

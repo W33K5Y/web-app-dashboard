@@ -32,6 +32,9 @@ nav {
   align-items: center;
   background-color: $nav-background;
   border-top: thick double $primaryColor;
+  & a:hover .st0{
+      fill: $primaryColor;
+  }
 }
 .st0 {
   fill: whitesmoke;

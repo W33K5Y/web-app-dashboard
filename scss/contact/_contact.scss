@@ -30,6 +30,13 @@ section.new-members:nth-child(8) > h2 {
 h4 {
   margin-left: 10px;
 }
+.member-email-wrap,.activity {
+  font-size: 1.2em;
+
+  & h4 {
+    margin:0;
+  }
+}
 //! Message user form  */
 
 

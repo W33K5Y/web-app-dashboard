@@ -1,8 +1,12 @@
 // !========= Tablet view ===========
 @media (min-width: 768px) {
+
 .main-wrap {
   grid-template-rows: 80px 1fr;
 }
+header-seperator > div:nth-child(2) {
+  width: 35%;
+  }
 .dropdown-content-js {
   top: 80px;
   }
@@ -85,6 +89,7 @@
   flex-grow: 2;
   margin-left: 20px;
 }
+
 #new-members-wrap,
 #recent-activity-wrap
  {
@@ -92,7 +97,6 @@
   
   }
  
-   
   .form-input-wrap {
     min-width: 400px;
    }
@@ -160,9 +164,7 @@ div.toggle-wrap:nth-child(2) {
 .on-js {
   font-size: .7em;
 }
-body {
-  background-color: whitesmoke;
-}
+
  
 }
 
