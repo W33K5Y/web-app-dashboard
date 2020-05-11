@@ -98,9 +98,13 @@ height: 0;
 flex-direction: column;
 }
 .toggle-wrap {
-@include flex(space-between, center);
-flex-direction: row;
-margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px 0;
+  height: 50px;
+  align-items: last baseline;
 }
 
 // ! arrow 

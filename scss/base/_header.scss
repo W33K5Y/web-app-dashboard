@@ -38,6 +38,15 @@ header {
   }
 
   // ! styles for dropdown menu 
+
+  .bell-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+    }
+    .carrot-up,.carrot-down {
+      font-size: .7em;
+    }
   .dropdown-content {
     display: none;
   }

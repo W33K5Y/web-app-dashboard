@@ -136,5 +136,33 @@
   transition: stroke 5s ease-out;
   margin: 20px 0;
 }
+
+// ! settings realignment 
+
+#settings {
+  padding-right: 52px;
+  padding-left: 3px;
+  margin-top: -11px;
+}
+
+
+#timeZone {
+  width: 80%;
+}
+
+div.toggle-wrap:nth-child(1) {
+  width: 80%;
+}
+
+div.toggle-wrap:nth-child(2) {
+  width: 80%;
+}
+.on-js {
+  font-size: .7em;
+}
+body {
+  background-color: whitesmoke;
+}
+ 
 }
 

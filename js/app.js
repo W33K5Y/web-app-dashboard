@@ -293,7 +293,7 @@ const dChart = new Chart(doughnutChart, {
 
 // ! Selectors for alerts 
 const alertDiv = document.querySelector('.alert-message');
-const alertDiv2 = document.querySelector('.alert-message2');
+const alertDiv2 = document.querySelector('.alert-message2-js');
 const alertDiv3= document.querySelector('.alert-message3-js');
 const bell = document.querySelector('.icon-bell');
 const cross = document.querySelector('.cross');
@@ -305,9 +305,9 @@ const alert1 = document.querySelector('.alert-1');
 const alert2 = document.querySelector('.alert-2');
 const dropdownWrap = document.querySelector('.dropdown-wrap');
 const dropdownContent = document.querySelector('.dropdown-content');
-
+const carrotUp = document.querySelector('.carrot-up');
+const carrotDown = document.querySelector('.carrot-down');
 // !======== object created to clean up code ==========
-
  const toggle = {
    alertMessage1: function () { 
     alertDiv.classList.toggle('alert-message');
@@ -329,14 +329,17 @@ dropDownMenu: function () {
     dropdownWrap.classList.toggle('dropdown-wrap-js');
     dropdownContent.classList.toggle('dropdown-content-js');
     dropdownContent.classList.toggle('dropdown-content');
+},
+carrotFunc: function () {
+    carrotUp.classList.toggle('alert');
+    carrotDown.classList.toggle('alert');
 }
  }
 
 // ! may not be used causing issues 
-// bell.addEventListener('click', () => {
-// toggle.alertMessage1();
-// toggle.alertMessage2();
-// });
+bell.addEventListener('click', () => {
+toggle.carrotFunc();
+});
 
 // ! both close/croses for alerts 
 cross.addEventListener('click', () => toggle.alertMessage1());
@@ -407,11 +410,13 @@ const cancelBtn = document.querySelector('.cancel');
 const emailNoti = document.getElementById('email-noti');
 const profileNoti = document.getElementById('profile-noti');
 const timeZone = document.getElementById('timeZone');
+
 saveBtn.addEventListener('click', () => {
     localStorage.setItem('email', emailNoti.checked);
     localStorage.setItem('profileToPublic', profileNoti.checked);
     localStorage.setItem('timeZone', timeZone.value);
 });
+
 cancelBtn.addEventListener('click', () => {
     localStorage.removeItem('email');
     localStorage.removeItem('profileToPublic');
@@ -421,6 +426,5 @@ cancelBtn.addEventListener('click', () => {
 window.onload = function () {
     emailNoti.checked = JSON.parse(localStorage.getItem('email'));
     profileNoti.checked = JSON.parse(localStorage.getItem('profileToPublic'));
-    timeZone.checked = JSON.parse(localStorage.getItem('timeZone'));
-
+    timeZone.value = JSON.parse(localStorage.getItem('timeZone'));
 };
