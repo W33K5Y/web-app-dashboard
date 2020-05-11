@@ -138,6 +138,7 @@
 </nav>
 
 <main class="main-container">
+
 	<h1>Dashboard</h1>
 	<div class="search-input">
 		<input list="search-text-input" type='text' placeholder='Search...' id='search-text-choice' name="search-text-choice" />
@@ -197,23 +198,29 @@
 			</p>
 		</div>
 	</div>
-
+	<!-- ! drop down info  -->
 	<ul class="dash-line-btns">
 		<li><a id="hourly" >Hourly</a></li>
 		<li><a id="daily" >Daily</a></li>
 		<li><a id="weekly" >Weekly</a></li>
 		<li><a id="monthly" >Monthly</a></li>
 	</ul>
+	<!-- ! Line Chart Div -->
 	<div class="line-chart-wrap chart">
 		<h2 class="graph-title">Traffic</h2>
 		<canvas id="lineChart" > </canvas>
 	</div>
+
+
+	<!-- ! desktop grid -->
+	<div class="desktop-grid">
+	<!-- ! barChart & dounut div wrap  -->
 	<div class="dailyTraffic ">
-		<div class="chart">
+		<div class="chart barChart-wrap">
 			<h2 class="graph-title">Daily Traffic</h2>
 			<canvas id="barChart"></canvas>
 		</div>
-		<div class="chart">
+		<div class="chart doughnut-wrap">
 			<h2 class="graph-title">Mobile Users</h2>
 			<canvas id="doughnutChart"></canvas>
 		</div>
@@ -402,7 +409,6 @@
 		<div>
 			<img src="images/member-4.jpg" alt="member1">
 			<div>
-				<h4>Member4</h4>
 				<p>Member three done a thing</p>
 				<p> Some time limit</p>
 			</div>
@@ -525,6 +531,9 @@
 	</section>
 </div>
 </main>
+
+</div>
+<!-- ! grid end for desktop -->
 </div>
 
 <script src="js/app.js"></script> 

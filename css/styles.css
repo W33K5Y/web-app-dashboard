@@ -436,6 +436,10 @@ button[type=submit] {
   max-width: 260px;
 }
 
+.form-input-wrap {
+  width: 30vw;
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -611,19 +615,19 @@ input:checked + .slider:before {
 
   .dailyTraffic {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 50% 50%;
   }
 
   .contact-wrap {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
-    gap: 2%;
+    gap: 5%;
     margin: 0 10px 0 10px;
   }
 
   .new-members > div {
+    font-size: 0.9em;
     height: auto;
   }
 
@@ -666,6 +670,10 @@ input:checked + .slider:before {
 
   #messageUser {
     min-width: 90%;
+  }
+
+  #message-sent {
+    font-size: 0.88em;
   }
 
   .icon-dash,

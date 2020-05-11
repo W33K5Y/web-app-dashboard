@@ -55,30 +55,31 @@
 
 // !========= Desktop view ===========
 
+
 @media (min-width: 1024px) {
   #hourly,#daily,#weekly,#monthly {
     min-height: 19px;
     font-size: 1.6em;
    }
    
-  .dailyTraffic {
+   .dailyTraffic {
     display: grid;
-    grid-template-columns:1fr 1fr;
-    grid-template-rows: 1fr ;
+    grid-template-columns: 50% 50%;
+    
   }
- 
+
 .contact-wrap {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
-  // background-color: lightpink;
-  gap: 2%;
+  gap: 5%;
   margin: 0 10px 0 10px;
 }
 
 .new-members > div {
+  font-size: .9em;
   height: auto;
-}
+  }
 
 .member-email-wrap {
   flex-grow: 2;
@@ -90,13 +91,14 @@
   width: 100%;
   
   }
+ 
+   
   .form-input-wrap {
     min-width: 400px;
    }
    #settings{
     display: flex;
     align-content: flex-end;
-    // padding-top: 65px;
     border-bottom: none;
     & button {
       width: 40%;
@@ -120,8 +122,11 @@
     #messageUser {
     min-width: 90%;
     }
-  //  ! nav svg 
-  .icon-dash,
+    #message-sent {
+      font-size: 0.88em;
+    }
+
+.icon-dash,
 .icon-visits,
 .icon-settings,
 .icon-members,
@@ -133,11 +138,3 @@
 }
 }
 
- 
-
-// .contact-wrap {
-//   display: flex;
-//   justify-content: space-between;
-//   align-content: center;
-//   background-color: lightgreen;
-// }
