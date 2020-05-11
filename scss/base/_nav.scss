@@ -5,8 +5,8 @@
 .icon-settings,
 .icon-members,
 .icon-bell {
-  width: 25px;
-  height:25px;
+  width: 100%;
+  height:100%;
   transition: stroke 5s ease-out;
   margin: 20px 0;
 }
@@ -14,10 +14,12 @@
 .icon-bell-path{
 stroke: white;
 fill: white;
+transition:scale .3s ease-in-out,fill .1s .1s ease-in-out ;
 }
 .icon-bell:hover .icon-bell-path {
   stroke: rgba(250, 234, 9, 0.87);
   fill: rgba(250, 234, 9, 0.87);
+  transform: scale(1.03);
 }
 
 .icon-bell:hover {
