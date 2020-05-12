@@ -46,6 +46,13 @@ header-seperator > div:nth-child(2) {
   .main-title {
     font-size: 0.85em;
   }
+
+  .icon-bell {
+    max-height: 35px;
+    }
+    .bell-wrap {
+      margin-right: 25px;
+    }
 // ! contact section 
 .form-input-wrap {
     min-width: 702px;
@@ -61,6 +68,12 @@ header-seperator > div:nth-child(2) {
 
 
 @media (min-width: 1024px) {
+  .icon-bell {
+    max-height: 40px;
+    }
+    .bell-wrap {
+      margin-right: 30px;
+    }
   #hourly,#daily,#weekly,#monthly {
     min-height: 19px;
     font-size: 1.6em;

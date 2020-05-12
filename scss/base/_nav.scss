@@ -14,7 +14,7 @@
 .icon-bell-path{
 stroke: white;
 fill: white;
-transition:scale .3s ease-in-out,fill .1s .1s ease-in-out ;
+transition:scale .3s ease-in-out,stroke 1.5s .1s ease-in-out ;
 }
 .icon-bell:hover .icon-bell-path {
   stroke: rgba(250, 234, 9, 0.87);
