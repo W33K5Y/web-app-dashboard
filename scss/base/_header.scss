@@ -171,3 +171,14 @@ opacity: .8;
   .bell-wrap {
     margin-right: 20px;
   }
+
+  .icon-dash,
+.icon-visits,
+.icon-settings,
+.icon-members,
+.icon-bell {
+  width: 46px;
+  height: 36px;
+  transition: stroke 5s ease-out;
+  margin: 20px 0;
+}
